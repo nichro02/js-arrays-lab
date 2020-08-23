@@ -38,7 +38,11 @@ Exercise 4:
 
 // Complete Exercise 4 below...
 
-var favFood = foods.indexOf('pizza');
+//var favFood = foods.indexOf('pizza');
+
+var favFood = foods.slice(foods.indexOf('pizza'),foods.indexOf('pizza') + 1);
+favFood = favFood.toString();
+
 
 console.log('Exercise 4 Result:\n', favFood);
 
@@ -125,15 +129,11 @@ nums.forEach(addOdd);
 
 function addOdd (item) {
   if (item % 2 != 0) {
-    odds.push(item);
-    //odds += item
-    //for (var i of nums) {
-    //  odds.push(i)
-    //} 
+    odds.push(item); 
   } 
 }
 
-// Not sure this is 100% right - array looks a bit off in console
+// Not sure this is 100% right - array looks a bit off in console when run
 
 console.log('Exercise 11 Result:\n', odds);
 
@@ -156,13 +156,10 @@ nums.forEach(divide);
 function divide (item) {
   if (item % 3 == 0 && item % 5 == 0) {
     fizzbuzz.push(item);
-    //fizzbuzz += item
   } else if (item % 3 == 0) {
     fizz.push(item);
-    //fizz += item
   } else if (item % 5 == 0) {
     buzz.push(item);
-    //buzz += item
   }
 }
 
@@ -241,7 +238,7 @@ Exercise 15:
 
 total = 0
 
-/* Code I started with, but didn't end up using
+/* Code I started with, but didn't end up using. I knew I needed to add each item to total, but commented out code didn't add each element in each array
 numArrays.forEach(aggregate)
 
 function aggregate (item) {
